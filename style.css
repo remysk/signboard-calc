@@ -1,0 +1,43 @@
+body{
+    background: rgb(211,211,211,0.2);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+
+    width: 4rem;
+    text-align: center;
+}
+
+.important {
+    color: red;
+}
+table{
+    text-align: center;
+}
+table th {
+    font-size: .8rem;
+    font-weight: bold;
+    padding-top:0px !important;
+    padding-bottom:0px !important;
+}
+table td {
+    font-size: .8rem;
+    padding-top:0px !important;
+    padding-bottom:0px !important;
+}
+td:nth-child(1),th:nth-child(1) {
+    text-align: left;
+}   
+.spacer{
+    min-height: 50px;
+}
+.hide{display: none;}
+
+span { color: red}
