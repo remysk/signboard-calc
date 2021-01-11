@@ -83,7 +83,7 @@
                                 <option value="2">Tingkat atas</option>
                                 <option value="3">Lain-lain</option>
                             </select>
-                            <!-- <input type="number" name="" id="upah-other" class="calc" placeholder="nyatakan"> -->
+                            <input type="number" name="" id="upah-plus" class="calc" placeholder="nyatakan">
                         </p>
                      
                         <p>Kuantiti: <input type="number" name="qty" id="qty" class="calc" value=1 min=1></p>
@@ -347,7 +347,9 @@
                     upah_pr = upah_2
                     break;
                 case "3":
-                    upah_pr = upah_3
+                    // upah_pr = upah_3
+                    $("#upah-plus").show();
+                    upah_pr = $("#upah-plus").val();
                     break;
             
                 default:

@@ -80,7 +80,7 @@
                                 <option value="2">Tingkat atas</option>
                                 <option value="3">Lain-lain</option>
                             </select>
-                            <!-- <input type="number" name="" id="upah-other" class="calc" placeholder="nyatakan"> -->
+                            <input type="number" name="" id="upah-plus" class="calc" placeholder="nyatakan">
                         </p>
                         <!-- <p>Upah Pasang RM: <input type="number" name="upah" id="upah" step=0.01 class="calc"> </p> -->
                
@@ -297,7 +297,9 @@
                     upah_pr = upah_2
                     break;
                 case "3":
-                    upah_pr = upah_3
+                    //upah_pr = upah_3
+                    $("#upah-plus").show();
+                    upah_pr = $("#upah-plus").val();
                     break;
             
                 default:
@@ -359,7 +361,7 @@
             $("#output-upah").html(upah_pr*qty);
             
             $("#output-total").html(total.toFixed(2))
-            $("#output-sale").html(sale.toFixed(0))
+            $("#output-sale").html(sale.toFixed(2))
             
             // $("#output-wiring").html(wiring_p)
            
