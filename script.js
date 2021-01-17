@@ -32,6 +32,10 @@ function sum() {
 }
 
 function countSticker(lebar, tinggi, type){
+    
+    lebar = Number(lebar) 
+    tinggi = Number(tinggi) 
+    type = Number(type)
     //type = 1 for no laminate
     if (lebar == 4 || tinggi == 4) {
         saiz = lebar * tinggi
@@ -39,13 +43,22 @@ function countSticker(lebar, tinggi, type){
         sticker_ttl = (sticker_pr*saiz).toFixed(2)
         $("#output-lebar").html(lebar)
         $("#output-tinggi").html(tinggi)
-    } else if (lebar < 4 && tinggi < 4) {
+    } 
+    else if ((lebar < 4 || tinggi < 4) && (lebar >= 4 || tinggi >= 4)) {
+        saiz = Math.max(lebar, tinggi) * 4
+        sticker_pr = (type == 1 ? sticker : sticker_laminate)
+        sticker_ttl = (sticker_pr*saiz).toFixed(2)
+        $("#output-lebar").html(Math.max(lebar, tinggi))
+        $("#output-tinggi").html("4")    
+    }
+    else if (lebar < 4 && tinggi < 4 ) {
         saiz = Math.min(lebar, tinggi) * 4
         sticker_pr = (type == 1 ? sticker : sticker_laminate)
         sticker_ttl = (sticker_pr*saiz).toFixed(2)
         $("#output-lebar").html(Math.min(lebar, tinggi))
         $("#output-tinggi").html("4")    
-    }else if(lebar > 4 && tinggi > 4){
+    }
+    else if(lebar > 4 && tinggi > 4){
         saiz = lebar * tinggi
         sticker_pr = (type == 1 ? sticker : sticker_laminate_5)
         sticker_ttl = (sticker_pr*saiz).toFixed(2)

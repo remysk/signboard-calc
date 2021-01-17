@@ -27,8 +27,8 @@
                         <p>Jenis:
                             <select name="jenis" id="type">
                                 <option>Biasa</option>
-                                <option onclick="window.location.href='lightbox.html'">Lightbox</option>
-                                <option onclick="window.location.href='no-frame.html'">No Frame</option>
+                                <option onclick="window.location.href='lightbox.php'">Lightbox</option>
+                                <option onclick="window.location.href='no-frame.php'">No Frame</option>
                             </select>
                         </p>
                         <p>Frame Material:
@@ -273,7 +273,7 @@
             }
 
             sticker_ttl = countSticker(lebar, tinggi, sticker_type)
-            
+            console.log(lebar+tinggi+sticker_type)
             colorbond_ttl = (colorbond*saiz).toFixed(2)
             //sticker_ttl = (sticker*saiz).toFixed(2)
 
