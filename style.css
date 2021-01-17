@@ -43,3 +43,7 @@ td:nth-child(1),th:nth-child(1) {
 span { color: red}
 
 #upah-plus {display: none;}
+
+.card { width: 18rem;}
+.card a{ color: #000;}
+.card a:hover{ text-decoration: none;}
